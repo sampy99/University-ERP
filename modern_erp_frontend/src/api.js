@@ -1,7 +1,8 @@
 // src/api/API.js
 import axios from "axios";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8080";
+const API_BASE = import.meta.env.VITE_API_URL || "https://your-backend-service.railway.app";
+// "http://localhost:8080"
 
 // Create axios instance
 export const api = axios.create({
