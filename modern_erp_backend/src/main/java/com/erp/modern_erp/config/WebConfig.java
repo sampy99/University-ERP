@@ -15,7 +15,7 @@ public class WebConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
           configuration.setAllowedOrigins(List.of(
-                "https://university-erp-production.up.railway.app" // frontend Railway URL
+                "https://believable-possibility-production.up.railway.app" // frontend Railway URL
         ));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*")); // allow all headers
