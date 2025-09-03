@@ -14,15 +14,11 @@ public class WebConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of(
-                "http://localhost:3000",
-                "http://127.0.0.1:3000",
-                "http://localhost:5173",
-                "http://127.0.0.1:5173",
-                "https://believable-possibility-production.up.railway.app"  // Add this
+          configuration.setAllowedOrigins(List.of(
+                "https://university-erp-production.up.railway.app" // frontend Railway URL
         ));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        configuration.setAllowedHeaders(List.of("Authorization", "Content-Type", "Accept"));
+        configuration.setAllowedHeaders(List.of("*")); // allow all headers
         configuration.setAllowCredentials(true);
         configuration.setMaxAge(3600L);
 
