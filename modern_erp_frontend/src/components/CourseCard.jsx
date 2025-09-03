@@ -20,16 +20,9 @@ const CourseCard = ({ course, showEnrollButton = false, onEnrollSuccess, onEnrol
         throw new Error('No authentication token found. Please log in again.');
       }
 
-      const response = await fetch('http://localhost:8080/api/student/enroll', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify({
-          courseId: course.id
-        })
-      });
+    const response = await api.post('/api/student/enroll', {
+  courseId: course.id
+});
 
       const data = await response.json();
 
