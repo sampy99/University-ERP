@@ -8,7 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 public interface AdminService {
-    Course createCourse(String code, String title, Long lecturerId);
+    Course createCourse(String code,String semester, String title, Long lecturerId);
     Course assignLecturer(Long courseId, Long lecturerId);
     User updateUser(Long userId, String fullName, String email, String username);
     LecturerResponse getById(Long id);
