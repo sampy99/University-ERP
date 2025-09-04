@@ -1,7 +1,7 @@
 // src/api/API.js
 import axios from "axios";
 
-const API_BASE = import.meta.env.VITE_API_URL || "https://your-backend-service.railway.app";
+const API_BASE = import.meta.env.VITE_API_URL || "https://university-erp-production.up.railway.app/";
 // "http://localhost:8080"
 
 // Create axios instance
