@@ -40,7 +40,7 @@ public class AdminController {
     @PostMapping("/course")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Course> createCourse(@RequestBody CreateCourseRequest req) {
-        return ResponseEntity.ok(adminService.createCourse(req.getCode(), req.getTitle(), req.getLecturerId()));
+        return ResponseEntity.ok(adminService.createCourse(req.getCode(), req.getSemester(),req.getTitle(), req.getLecturerId()));
     }
 
     @PostMapping("/course/assign")
