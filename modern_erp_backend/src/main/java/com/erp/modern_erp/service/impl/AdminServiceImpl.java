@@ -26,11 +26,11 @@ public class AdminServiceImpl implements AdminService {
     private final AdminRepository adminRepository;
 
     @Override
-    public Course createCourse(String code, String title, Long lecturerId) {
+    public Course createCourse(String code,String semester, String title, Long lecturerId) {
         if (courseRepository.existsByCode(code)) {
             throw new IllegalArgumentException("Course code already exists");
         }
-        Course course = Course.builder().code(code).title(title).build();
+        Course course = Course.builder().code(code).title(title).semester(Semester.valueOf(semester)).build();
         if (lecturerId != null) {
             Lecturer lec = lecturerRepository.findById(lecturerId).orElseThrow();
             course.setLecturer(lec);
