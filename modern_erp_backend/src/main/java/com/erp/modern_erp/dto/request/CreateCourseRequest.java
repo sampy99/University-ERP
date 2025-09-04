@@ -6,5 +6,6 @@ import lombok.Data;
 public class CreateCourseRequest {
     private String code;
     private String title;
+      private String semester;
     private Long lecturerId;
 }
